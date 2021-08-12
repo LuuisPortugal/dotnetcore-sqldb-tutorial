@@ -21,6 +21,10 @@ namespace DotNetCoreSqlDb.Controllers
         // GET: Todos
         public async Task<IActionResult> Index()
         {
+            Console.WriteLine("---------------------- _context.Database.Exists()");
+            Console.WriteLine(_context.Database.Exists());
+            Console.WriteLine("---------------------- _context.Database.Exists()");
+
             return View(await _context.Todo.ToListAsync());
         }
 
