@@ -22,7 +22,7 @@ namespace DotNetCoreSqlDb.Controllers
         public async Task<IActionResult> Index()
         {
             Console.WriteLine("---------------------- _context.Database.Exists()");
-            Console.WriteLine(_context.Database.Exists());
+            Console.WriteLine(_context.Database.CanConnect());
             Console.WriteLine("---------------------- _context.Database.Exists()");
 
             return View(await _context.Todo.ToListAsync());
